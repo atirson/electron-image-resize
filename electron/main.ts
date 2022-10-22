@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu, MenuItemConstructorOptions } from 'electron'
 
 let mainWindow: BrowserWindow | null
 
@@ -10,12 +10,14 @@ declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 //     ? process.resourcesPath
 //     : app.getAppPath()
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 function createWindow () {
   mainWindow = new BrowserWindow({
     // icon: path.join(assetsPath, 'assets', 'icon.png'),
-    width: 1100,
-    height: 700,
-    backgroundColor: '#191622',
+    width: isDev ? 1000 : 500,
+    height: 800,
+    backgroundColor: '#008080',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -28,6 +30,10 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  if (isDev) {
+    mainWindow.webContents.openDevTools()
+  }
 }
 
 async function registerListeners () {
@@ -39,10 +45,31 @@ async function registerListeners () {
   })
 }
 
+interface MenuProps extends MenuItemConstructorOptions {}
+
+const menu: MenuProps[] = [
+  {
+    label: 'File',
+    submenu: [
+      { role: 'quit' },
+    ],
+  },
+  {
+    label: 'View',
+    submenu: [
+      { role: 'reload' },
+      { role: 'forceReload' },
+    ],
+  }
+]
+
 app.on('ready', createWindow)
   .whenReady()
   .then(registerListeners)
   .catch(e => console.error(e))
+
+const mainMenu = Menu.buildFromTemplate(menu)
+Menu.setApplicationMenu(mainMenu)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
