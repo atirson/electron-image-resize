@@ -9,10 +9,13 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 150px;
 
-  height: 150px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
+  padding: 40px 20px;
   background-color: #e6e6e6;
   border-radius: 10px;
+
+  margin-bottom: 20px;
 `;
 
 export const Label = styled.label`
@@ -39,4 +42,10 @@ export const Text = styled.p`
   text-transform: uppercase;
   color: gray;
   font-size: 1rem;
+`;
+
+export const NameFile = styled.p`
+  text-transform: uppercase;
+  color: #008080;
+  font-size: 0.85rem;
 `;

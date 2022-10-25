@@ -10,13 +10,13 @@ declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 //     ? process.resourcesPath
 //     : app.getAppPath()
 
-const isDev = process.env.NODE_ENV !== 'production'
+// const isDev = process.env.NODE_ENV !== 'production'
 
 function createWindow () {
   mainWindow = new BrowserWindow({
     // icon: path.join(assetsPath, 'assets', 'icon.png'),
-    width: isDev ? 1000 : 500,
-    height: 800,
+    width: 1366,
+    height: 768,
     backgroundColor: '#008080',
     webPreferences: {
       nodeIntegration: false,
@@ -31,9 +31,9 @@ function createWindow () {
     mainWindow = null
   })
 
-  if (isDev) {
-    mainWindow.webContents.openDevTools()
-  }
+  // if (isDev) {
+  //   mainWindow.webContents.openDevTools()
+  // }
 }
 
 async function registerListeners () {

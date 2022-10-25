@@ -2203,6 +2203,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/file-saver@^2.0.5":
+  version "2.0.5"
+  resolved "https://ab-inbev.pkgs.visualstudio.com/GHQ_B2B_Delta/_packaging/nfa-services/npm/registry/@types/file-saver/-/file-saver-2.0.5.tgz#9ee342a5d1314bb0928375424a2f162f97c310c7"
+  integrity sha1-nuNCpdExS7CSg3VCSi8WL5fDEMc=
+
 "@types/fs-extra@^9.0.1":
   version "9.0.13"
   resolved "https://ab-inbev.pkgs.visualstudio.com/GHQ_B2B_Delta/_packaging/nfa-services/npm/registry/@types/fs-extra/-/fs-extra-9.0.13.tgz#7594fbae04fe7f1918ce8b3d213f74ff44ac1f45"
@@ -4837,6 +4842,11 @@ file-loader@^6.2.0:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://ab-inbev.pkgs.visualstudio.com/GHQ_B2B_Delta/_packaging/nfa-services/npm/registry/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha1-1hz+LOBZ9BTYmendbUEH7iVnDDg=
 
 file-type@^12.3.0:
   version "12.4.2"
@@ -8047,6 +8057,11 @@ react-hot-loader@4.13.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
     source-map "^0.7.3"
+
+react-image-file-resizer@^0.4.8:
+  version "0.4.8"
+  resolved "https://ab-inbev.pkgs.visualstudio.com/GHQ_B2B_Delta/_packaging/nfa-services/npm/registry/react-image-file-resizer/-/react-image-file-resizer-0.4.8.tgz#85f4ae4469fd2867d961568af660ef403d7a79af"
+  integrity sha1-hfSuRGn9KGfZYVaK9mDvQD16ea8=
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"

@@ -14,4 +14,14 @@ export const Input = styled.input`
   &::placeholder {
     color: #999;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+`;
+
+export const Label = styled.label`
+  font-weight: bold;
 `;

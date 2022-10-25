@@ -1,6 +1,6 @@
 import { GlobalStyle } from './styles/GlobalStyle'
 
-import Main from './components/Main'
+import { Main } from './pages/Home'
 
 export function App() {
   return (

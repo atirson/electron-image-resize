@@ -1,12 +1,15 @@
 import { InputHTMLAttributes } from 'react'
-import { Input as InputRoot } from './styles'
+import { Input as InputRoot, Label } from './styles'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
-
-const Input = (props: InputProps) => {
-  return (
-    <InputRoot {...props} />
-  )
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string
 }
 
-export default Input
+export function Input(props: InputProps) {
+  return (
+    <>
+      {props.label && <Label>{props.label}</Label>}
+      <InputRoot aria-label={props.label} {...props} />
+    </>
+  )
+}
