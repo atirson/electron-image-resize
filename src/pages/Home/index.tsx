@@ -104,4 +104,4 @@ export function Main() {
   )
 }
 
-// Add Label = OK ; Icon Clean File ; Style Preview
+// Add Label = OK ; Icon Clean File ; Style Preview = OK

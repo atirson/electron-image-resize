@@ -5,13 +5,6 @@ let mainWindow: BrowserWindow | null
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
 
-// const assetsPath =
-//   process.env.NODE_ENV === 'production'
-//     ? process.resourcesPath
-//     : app.getAppPath()
-
-// const isDev = process.env.NODE_ENV !== 'production'
-
 function createWindow () {
   mainWindow = new BrowserWindow({
     // icon: path.join(assetsPath, 'assets', 'icon.png'),
@@ -31,9 +24,6 @@ function createWindow () {
     mainWindow = null
   })
 
-  // if (isDev) {
-  //   mainWindow.webContents.openDevTools()
-  // }
 }
 
 async function registerListeners () {
